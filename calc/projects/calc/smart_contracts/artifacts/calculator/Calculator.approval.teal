@@ -1,0 +1,194 @@
+#pragma version 10
+
+smart_contracts.calculator.contract.Calculator.approval_program:
+    intcblock 1 0
+    bytecblock 0x151f7c75
+    callsub __puya_arc4_router__
+    return
+
+
+// smart_contracts.calculator.contract.Calculator.__puya_arc4_router__() -> uint64:
+__puya_arc4_router__:
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    proto 0 1
+    txn NumAppArgs
+    bz __puya_arc4_router___bare_routing@8
+    pushbytess 0xfe6bdf69 0x78b488b7 0xe2f188c5 0x16e80f08 // method "add(uint64,uint64)uint64", method "sub(uint64,uint64)uint64", method "mul(uint64,uint64)uint64", method "div(uint64,uint64)uint64"
+    txna ApplicationArgs 0
+    match __puya_arc4_router___add_route@2 __puya_arc4_router___sub_route@3 __puya_arc4_router___mul_route@4 __puya_arc4_router___div_route@5
+    intc_1 // 0
+    retsub
+
+__puya_arc4_router___add_route@2:
+    // smart_contracts/calculator/contract.py:6
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/calculator/contract.py:6
+    // @abimethod()
+    callsub add
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    retsub
+
+__puya_arc4_router___sub_route@3:
+    // smart_contracts/calculator/contract.py:10
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/calculator/contract.py:10
+    // @abimethod()
+    callsub sub
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    retsub
+
+__puya_arc4_router___mul_route@4:
+    // smart_contracts/calculator/contract.py:14
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/calculator/contract.py:14
+    // @abimethod()
+    callsub mul
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    retsub
+
+__puya_arc4_router___div_route@5:
+    // smart_contracts/calculator/contract.py:18
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    txna ApplicationArgs 1
+    btoi
+    txna ApplicationArgs 2
+    btoi
+    // smart_contracts/calculator/contract.py:18
+    // @abimethod()
+    callsub div
+    itob
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    retsub
+
+__puya_arc4_router___bare_routing@8:
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    txn OnCompletion
+    bnz __puya_arc4_router___after_if_else@12
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    retsub
+
+__puya_arc4_router___after_if_else@12:
+    // smart_contracts/calculator/contract.py:5
+    // class Calculator(ARC4Contract):
+    intc_1 // 0
+    retsub
+
+
+// smart_contracts.calculator.contract.Calculator.add(a: uint64, b: uint64) -> uint64:
+add:
+    // smart_contracts/calculator/contract.py:6-7
+    // @abimethod()
+    // def add(self, a: UInt64,b: UInt64)->UInt64:
+    proto 2 1
+    // smart_contracts/calculator/contract.py:8
+    // return a+b
+    frame_dig -2
+    frame_dig -1
+    +
+    retsub
+
+
+// smart_contracts.calculator.contract.Calculator.sub(a: uint64, b: uint64) -> uint64:
+sub:
+    // smart_contracts/calculator/contract.py:10-11
+    // @abimethod()
+    // def sub(self, a: UInt64,b: UInt64)->UInt64:
+    proto 2 1
+    // smart_contracts/calculator/contract.py:12
+    // return a-b
+    frame_dig -2
+    frame_dig -1
+    -
+    retsub
+
+
+// smart_contracts.calculator.contract.Calculator.mul(a: uint64, b: uint64) -> uint64:
+mul:
+    // smart_contracts/calculator/contract.py:14-15
+    // @abimethod()
+    // def mul(self, a: UInt64,b: UInt64)->UInt64:
+    proto 2 1
+    // smart_contracts/calculator/contract.py:16
+    // return a*b
+    frame_dig -2
+    frame_dig -1
+    *
+    retsub
+
+
+// smart_contracts.calculator.contract.Calculator.div(a: uint64, b: uint64) -> uint64:
+div:
+    // smart_contracts/calculator/contract.py:18-19
+    // @abimethod()
+    // def div(self, a: UInt64,b: UInt64)->UInt64:
+    proto 2 1
+    // smart_contracts/calculator/contract.py:20
+    // return a//b
+    frame_dig -2
+    frame_dig -1
+    /
+    retsub

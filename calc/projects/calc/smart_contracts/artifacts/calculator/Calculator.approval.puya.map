@@ -1,0 +1,897 @@
+{
+  "version": 3,
+  "sources": [
+    "../../calculator/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;AAIA;;;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;AAAA;AAAA;AACK;;AAAA;AAAA;AAAA;;AAAA;AADL;;;AAAA;AAAA;;;AAAA;AACK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIA;;AAAA;AAAA;AAAA;;AAAA;AALL;;;AAAA;AAAA;;;AAAA;AAKK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIA;;AAAA;AAAA;AAAA;;AAAA;AATL;;;AAAA;AAAA;;;AAAA;AASK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAIA;;AAAA;AAAA;AAAA;;AAAA;AAbL;;;AAAA;AAAA;;;AAAA;AAaK;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAbL;;AAAA;;;;;;;;;AAAA;AAAA;AACA;;;AAEe;;AAAA;;AAAA;AAAP;AAER;;;AAEe;;AAAA;;AAAA;AAAP;AAER;;;AAEe;;AAAA;;AAAA;AAAP;AAER;;;AAEe;;AAAA;;AAAA;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.approval_program",
+      "params": {},
+      "block": "smart_contracts.calculator.contract.Calculator.approval_program",
+      "stack_in": [],
+      "op": "intcblock 1 0"
+    },
+    "5": {
+      "op": "bytecblock 0x151f7c75"
+    },
+    "12": {
+      "callsub": "smart_contracts.calculator.contract.Calculator.__puya_arc4_router__",
+      "op": "callsub __puya_arc4_router__",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "15": {
+      "op": "return",
+      "stack_out": []
+    },
+    "16": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.__puya_arc4_router__",
+      "params": {},
+      "block": "__puya_arc4_router__",
+      "stack_in": [],
+      "op": "proto 0 1"
+    },
+    "19": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "21": {
+      "op": "bz __puya_arc4_router___bare_routing@8",
+      "stack_out": []
+    },
+    "24": {
+      "op": "pushbytess 0xfe6bdf69 0x78b488b7 0xe2f188c5 0x16e80f08 // method \"add(uint64,uint64)uint64\", method \"sub(uint64,uint64)uint64\", method \"mul(uint64,uint64)uint64\", method \"div(uint64,uint64)uint64\""
+    },
+    "46": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(add(uint64,uint64)uint64)",
+        "Method(div(uint64,uint64)uint64)",
+        "Method(mul(uint64,uint64)uint64)",
+        "Method(sub(uint64,uint64)uint64)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(add(uint64,uint64)uint64)",
+        "Method(sub(uint64,uint64)uint64)",
+        "Method(mul(uint64,uint64)uint64)",
+        "Method(div(uint64,uint64)uint64)",
+        "tmp%2#0"
+      ]
+    },
+    "49": {
+      "op": "match __puya_arc4_router___add_route@2 __puya_arc4_router___sub_route@3 __puya_arc4_router___mul_route@4 __puya_arc4_router___div_route@5",
+      "stack_out": []
+    },
+    "59": {
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "60": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "61": {
+      "block": "__puya_arc4_router___add_route@2",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "63": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "64": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "65": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "67": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "68": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "71": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "72": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "75": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%10#0"
+      ]
+    },
+    "76": {
+      "callsub": "smart_contracts.calculator.contract.Calculator.add",
+      "op": "callsub add",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "79": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "80": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "81": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "82": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "83": {
+      "op": "log",
+      "stack_out": []
+    },
+    "84": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "85": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "86": {
+      "block": "__puya_arc4_router___sub_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "88": {
+      "op": "!",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "89": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "90": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%14#0"
+      ],
+      "stack_out": [
+        "tmp%14#0"
+      ]
+    },
+    "92": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "93": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "96": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "97": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%17#0",
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%17#0",
+        "tmp%18#0"
+      ]
+    },
+    "100": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%17#0",
+        "tmp%19#0"
+      ],
+      "stack_out": [
+        "tmp%17#0",
+        "tmp%19#0"
+      ]
+    },
+    "101": {
+      "callsub": "smart_contracts.calculator.contract.Calculator.sub",
+      "op": "callsub sub",
+      "defined_out": [
+        "to_encode%1#0"
+      ],
+      "stack_out": [
+        "to_encode%1#0"
+      ]
+    },
+    "104": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0"
+      ]
+    },
+    "105": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%1#0",
+        "0x151f7c75"
+      ]
+    },
+    "106": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "107": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "108": {
+      "op": "log",
+      "stack_out": []
+    },
+    "109": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "110": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "111": {
+      "block": "__puya_arc4_router___mul_route@4",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "113": {
+      "op": "!",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "114": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "115": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%23#0"
+      ],
+      "stack_out": [
+        "tmp%23#0"
+      ]
+    },
+    "117": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "118": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "121": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "122": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%27#0"
+      ]
+    },
+    "125": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%26#0",
+        "tmp%28#0"
+      ],
+      "stack_out": [
+        "tmp%26#0",
+        "tmp%28#0"
+      ]
+    },
+    "126": {
+      "callsub": "smart_contracts.calculator.contract.Calculator.mul",
+      "op": "callsub mul",
+      "defined_out": [
+        "to_encode%2#0"
+      ],
+      "stack_out": [
+        "to_encode%2#0"
+      ]
+    },
+    "129": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0"
+      ]
+    },
+    "130": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%2#0",
+        "0x151f7c75"
+      ]
+    },
+    "131": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "132": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "133": {
+      "op": "log",
+      "stack_out": []
+    },
+    "134": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "135": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "136": {
+      "block": "__puya_arc4_router___div_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "138": {
+      "op": "!",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "139": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "140": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%32#0"
+      ],
+      "stack_out": [
+        "tmp%32#0"
+      ]
+    },
+    "142": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "143": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "146": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "147": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "tmp%36#0"
+      ]
+    },
+    "150": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%35#0",
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%35#0",
+        "tmp%37#0"
+      ]
+    },
+    "151": {
+      "callsub": "smart_contracts.calculator.contract.Calculator.div",
+      "op": "callsub div",
+      "defined_out": [
+        "to_encode%3#0"
+      ],
+      "stack_out": [
+        "to_encode%3#0"
+      ]
+    },
+    "154": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0"
+      ]
+    },
+    "155": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%3#0",
+        "0x151f7c75"
+      ]
+    },
+    "156": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "157": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "158": {
+      "op": "log",
+      "stack_out": []
+    },
+    "159": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "160": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "161": {
+      "block": "__puya_arc4_router___bare_routing@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "163": {
+      "op": "bnz __puya_arc4_router___after_if_else@12",
+      "stack_out": []
+    },
+    "166": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "168": {
+      "op": "!",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "169": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "170": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "171": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "172": {
+      "block": "__puya_arc4_router___after_if_else@12",
+      "stack_in": [],
+      "op": "intc_1 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "173": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "174": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.add",
+      "params": {
+        "a#0": "uint64",
+        "b#0": "uint64"
+      },
+      "block": "add",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "177": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "179": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "181": {
+      "op": "+",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "182": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "183": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.sub",
+      "params": {
+        "a#0": "uint64",
+        "b#0": "uint64"
+      },
+      "block": "sub",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "186": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "188": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "190": {
+      "op": "-",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "191": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "192": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.mul",
+      "params": {
+        "a#0": "uint64",
+        "b#0": "uint64"
+      },
+      "block": "mul",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "195": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "197": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "199": {
+      "op": "*",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "200": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "201": {
+      "subroutine": "smart_contracts.calculator.contract.Calculator.div",
+      "params": {
+        "a#0": "uint64",
+        "b#0": "uint64"
+      },
+      "block": "div",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "204": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "206": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)",
+        "b#0 (copy)"
+      ]
+    },
+    "208": {
+      "op": "/",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "209": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
